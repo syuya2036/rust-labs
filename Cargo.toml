@@ -1,0 +1,16 @@
+[workspace]
+resolver = "2"
+members = [
+    "math/*",
+    "cs/*",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["syuya2036 shuya@yantan.dev"]
+
+[workspace.dependencies]
+itertools = "0.12"
+thiserror = "1.0"
+anyhow = "1.0"
