@@ -1,0 +1,8 @@
+[package]
+name = "multi-thread-logger"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+
+[dependencies]
+tokio = { version = "1.49.0", features = ["full"] }
