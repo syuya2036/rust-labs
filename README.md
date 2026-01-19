@@ -29,6 +29,10 @@
 
 - [ ] LSM Tree
 
+#### distributed system
+- [ ] raft
+- [ ] snowflake id
+
 ### others
 
 - [ ] editor
