@@ -127,6 +127,21 @@ impl<T> Iterator for IntoIter<T> {
     }
 }
 
+impl<T> Drop for List<T> {
+    fn drop(&mut self) {
+        let mut now_node = self.head.take();
+        self.tail.take();
+        while let Some(node) = now_node {
+            let next = {
+                let mut n = node.borrow_mut();
+                n.next.take();
+                n.prev.take()
+            };
+            now_node = next;
+        }
+    }
+}
+
 #[cfg(test)]
 mod test {
     use super::List;
@@ -177,5 +192,17 @@ mod test {
         assert!(lst.is_empty());
         assert_eq!(lst.pop_front(), None);
         assert_eq!(lst.pop_back(), None);
+    }
+
+    #[test]
+    fn test_iter_into_iter() {
+        let elems = vec![1, 1, 2, 3, 5, 8, 13];
+
+        let mut lst = List::new();
+        for e in elems.clone() {
+            lst.push_back(e);
+        }
+        let collected: Vec<_> = lst.into_iter().collect();
+        assert_eq!(collected, elems);
     }
 }
