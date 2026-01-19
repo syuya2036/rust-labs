@@ -14,6 +14,7 @@
 ### cs
 #### algorithms
 
+- [x] [双方向連結リスト](./cs/algorithms/src/list)
 - [ ] skip list
 - [ ] BIT
 - [ ] merge sort
