@@ -2,7 +2,7 @@
 resolver = "2"
 members = [
     "math/*",
-    "cs/*",
+    "cs/*", "web/multi-thread-logger",
 ]
 
 [workspace.package]
