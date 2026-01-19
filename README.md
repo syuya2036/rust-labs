@@ -8,14 +8,26 @@
 ### math
 #### coding
 
+- [ ] ハミング符号
 - [ ] Reed-Solomn符号
 
 ### cs
 #### algorithms
 
-- [ ] skip list 
+- [ ] skip list
+- [ ] BIT
+- [ ] merge sort
 
 #### web
 
 - [ ] muliti thread logger
 - [ ] mini-redis
+- [ ] rate limitter
+
+#### db
+
+- [ ] LSM Tree
+
+### others
+
+- [ ] editor 
