@@ -14,6 +14,7 @@
 ### cs
 #### algorithms
 
+- [x] [双方向連結リスト](./cs/algorithms/src/list/list.rs)
 - [ ] skip list
 - [ ] BIT
 - [ ] merge sort
@@ -30,4 +31,4 @@
 
 ### others
 
-- [ ] editor 
+- [ ] editor
